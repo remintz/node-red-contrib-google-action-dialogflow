@@ -37,6 +37,10 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
         <label for="node-input-cert"><i class="fa fa-tag"></i> SSL Certificate File</span></label>
         <input id="node-input-cert" type="text" placeholder="/path/on/server/to/certificate.crt">
     </div>
+    <div class="form-row">
+        <label for="node-input-ca"><i class="fa fa-tag"></i> SSL Intermediate Certificate File</span></label>
+        <input id="node-input-ca" type="text" placeholder="/path/on/server/to/ca-bundle.crt">
+    </div>
 </script>
 
 <script type="text/x-red" data-help-name="google-action-dialogflow in">
@@ -109,7 +113,8 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
             port: {value:"8081",required:true},
             url: {value:"/", required:true},
             key: {value:"", requred:true},
-            cert: {value: "", required:true}
+            cert: {value: "", required:true},
+            ca: {value: "", required:true}
         },
         inputs:0,
         outputs:1,

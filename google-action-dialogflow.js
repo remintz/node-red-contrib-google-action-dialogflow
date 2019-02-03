@@ -42,10 +42,12 @@ module.exports = function(RED) {
         node.port = n.port || 8081;
         node.key = n.key || '';
         node.cert = n.cert || '';
+        node.ca = n.ca || '';
 
         const options = {
             key: fs.readFileSync(node.key),
-            cert: fs.readFileSync(node.cert)
+            cert: fs.readFileSync(node.cert),
+            ca: fs.readFileSync(node.ca),
         };
 
                 // Create new http server to listen for requests
